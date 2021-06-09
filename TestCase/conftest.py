@@ -6,3 +6,6 @@ from selenium import webdriver
 def setup():
     driver = webdriver.Firefox(executable_path="/home/uk/browers/firefox/geckodriver")
     return driver
+    yield
+
+    driver.quit()
